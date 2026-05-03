@@ -1,0 +1,16 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Audio and Reports (Private data)
+*.wav
+*.pdf
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db

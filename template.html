@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; color: #333; }
+        .header { border-bottom: 2px solid #4A90E2; padding-bottom: 10px; }
+        .score-box { background: #f4f7f6; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .high-score { color: green; font-weight: bold; }
+        .transcript { font-style: italic; color: #555; background: #eee; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Interview Assessment: {{ candidate_name }}</h1>
+        <p>Date: {{ date }}</p>
+    </div>
+
+    <div class="score-box">
+        <h2>Overall Confidence Score: <span class="high-score">{{ confidence }}%</span></h2>
+        <p><strong>Primary Tone:</strong> {{ tone }}</p>
+    </div>
+
+    <h3>Key Competencies Found:</h3>
+    <ul>
+        {% for skill in skills_found %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Full Transcript snippet:</h3>
+    <p class="transcript">"{{ transcript }}"</p>
+</body>
+</html>
